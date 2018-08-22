@@ -1,0 +1,32 @@
+
+ 
+<div class="box">
+   
+    <article class="media">
+         
+        <div class="media_content">
+            
+            <div class="content">
+               
+                
+        
+                    <p>
+                     
+                        <strong><%= comment.name %></strong>: <%= comment.comment %>
+                        
+                         
+                    </p>
+            
+               
+            </div>
+           
+        </div>
+        
+        <%= link_to 'Delete', [comment.post, comment], method: :delete, class: 'button is-danger', data: {confirm: "Are You sure?"}%>
+        
+    </article>
+    
+</div>
+
+
+

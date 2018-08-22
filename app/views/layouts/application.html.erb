@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simpleblog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+    <body>
+        <section class="hero is-primary is-medium">
+            <!-- Hero head: will stick at the top -->
+            <div class="hero-head">
+                <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <%= link_to 'Simple blog', root_path, class: "navbar-item" %>
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        
+                       
+                        <span class="navbar-item">
+                            <%= link_to 'Create a new Post', new_post_path, class: "navbar-item" %>
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                </nav>
+            </div>
+            
+            <!-- Hero content: will be in the middle -->
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                <%= yield :page_title %>
+                </div>
+            </div>
+        </section>
+        <%= yield %>
+    </body>
+  </section>
+</html>
